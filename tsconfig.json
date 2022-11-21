@@ -1,0 +1,16 @@
+// where are files?
+// 이번 학습에서는 nest.js 나 CRA를 사용하지 않기에 직접 tsconfig.json을 구성할 것 입니다.
+
+{
+  "include": ["src"], // src에 있는 모든 typescript 파일을 확인하고, 컴파일에 포함
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "ES6",
+    "lib": ["ES6"],
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "strict": true //타입스크립트가 코드를 보호해주도록 함. 엄격한 구조를 형성
+  } // outDir 자바스크립트가 생길 위치를 설정 tsc명령을 통해 컴파일러를 실행
+  // target: 어떤 버전의 자바스크립트로 너가 타입스크립트를 컴파일하고 싶은지를 나타냄
+  // lib: 목표로하는 실행환경을 나타내는 번들된 라이브러리의 정의파일(declare로 선언된 call signature들)의 설정을 구체화한다. API 사용을 위한 자동완성 제공(ES6: ES6를 지원하는 서버 JS API사용, DOM: 브라우저환경에서 사용할 것, 브라우저 API사용)
+}
